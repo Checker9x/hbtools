@@ -1,0 +1,22 @@
+{
+  "name": "hb-qa-tools",
+  "version": "1.0.0",
+  "description": "Performance monitor and animation lister for HappyBingo lobby testing",
+  "main": "main.js",
+  "author": "HB QA",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --publish never"
+  },
+  "devDependencies": {
+    "electron": "^33.0.0",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "ph.hbtools.qa",
+    "productName": "HB QA Tools",
+    "files": ["main.js", "scripts/**"],
+    "win": { "target": [{ "target": "portable", "arch": ["x64"] }] },
+    "mac": { "target": ["dmg", "zip"], "identity": null, "category": "public.app-category.developer-tools" }
+  }
+}
